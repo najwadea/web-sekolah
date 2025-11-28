@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berita Detail | Pondok Pesantren</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+      /* ---------------- Fonts Poppins ---------------- */
+      /* Thin 100 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Thin.ttf") format("truetype");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ThinItalic.ttf") format("truetype");
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* ExtraLight 200 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraLight.ttf") format("truetype");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraLightItalic.ttf") format("truetype");
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      /* Light 300 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Light.ttf") format("truetype");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-LightItalic.ttf") format("truetype");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      /* Regular 400 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Italic.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      /* Medium 500 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-MediumItalic.ttf") format("truetype");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      /* SemiBold 600 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-SemiBoldItalic.ttf") format("truetype");
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      /* Bold 700 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-BoldItalic.ttf") format("truetype");
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      /* ExtraBold 800 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraBoldItalic.ttf") format("truetype");
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      /* Black 900 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Black.ttf") format("truetype");
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-BlackItalic.ttf") format("truetype");
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      /* ---------------- Fonts Inter ---------------- */
+      /* Thin 100 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Thin.otf") format("opentype");
+        font-weight: 100;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-ThinItalic.otf") format("opentype");
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* Extra Light 200 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-ExtraLight.otf") format("opentype");
+        font-weight: 200;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-ExtraLightItalic.otf") format("opentype");
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      /* Light 300 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Light.otf") format("opentype");
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-LightItalic.otf") format("opentype");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      /* Regular 400 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Regular.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      /* Medium 500 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Medium.otf") format("opentype");
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-MediumItalic.otf") format("opentype");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      /* SemiBold 600 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-SemiBold.otf") format("opentype");
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-SemiBoldItalic.otf") format("opentype");
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      /* Bold 700 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Bold.otf") format("opentype");
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-BoldItalic.otf") format("opentype");
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      /* ExtraBold 800 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-ExtraBold.otf") format("opentype");
+        font-weight: 800;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-ExtraBoldItalic.otf") format("opentype");
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      /* Black 900 */
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-Black.otf") format("opentype");
+        font-weight: 900;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("./assets/fonts/fonts_inter/Inter-BlackItalic.otf") format("opentype");
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      /* ---------------- Navbar ---------------- */
+      .navbar-wrapper,
+      .navbar-wrapper * {
+        font-family: "Inter", sans-serif !important;
+      }
+
+      .navbar-wrapper {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        z-index: 999;
+      }
+
+      .navbar-custom {
+        margin: 52px 80px 0px 80px;
+        border-radius: 24px;
+        background-color: #fff;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 20px 0px 20px 24px;
+      }
+
+      .navbar-logo img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .navbar-brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar-brand-text p {
+        font-size: 14px;
+        color: #000;
+        line-height: 160%;
+        margin: 0;
+      }
+
+      .navbar-brand-text strong {
+        font-size: 18px;
+        color: #000;
+        line-height: 140%;
+      }
+
+      .button-group {
+        padding: 18px 24px 18px 0px;
+        gap: 24px;
+      }
+
+      .button-psb {
+        padding: clamp(12px, 2vw, 16.5px) clamp(20px, 3vw, 32px);
+        font-size: clamp(14px, 1.2vw, 16px);
+        line-height: 100%;
+        border-radius: clamp(10px, 1.2vw, 16px);
+        border: 1px solid #000;
+        background: transparent;
+        color: #000;
+      }
+
+      .button-psb:hover {
+        background: #000;
+        color: #fff;
+      }
+
+      .btn-dark {
+        padding: clamp(10px, 1.5vw, 14px) clamp(20px, 3vw, 32px);
+        line-height: 100%;
+        border-radius: clamp(10px, 1.2vw, 16px);
+        font-size: clamp(14px, 1.2vw, 16px);
+        background: #000;
+        border: 1px solid #000;
+      }
+
+      .btn-dark:hover {
+        background: #333;
+      }
+
+      .navbar-toggler {
+        display: none;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+
+      /* ---------------- Hero ---------------- */
+      .hero-section {
+        height: 300px;
+        width: 100%;
+        position: relative;
+        background: url("assets/images/hero/hero.jpg") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding: 80px 80px 56px 80px;
+      }
+
+      .hero-inner {
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .hero-content p,
+      span {
+        font-family: "Inter", sans-serif !important;
+        color: white;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin: 0;
+      }
+
+      /* ----------------Content ---------------- */
+      .berita-detail-section {
+        background: #ffffff;
+      }
+
+      .berita-image {
+        padding: 100px;
+
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .berita-image img {
+        width: 100%;
+        height: 560px;
+        border-radius: 24px;
+      }
+
+      .berita-content {
+        max-width: clamp(320px, 90vw, 720px);
+        margin-bottom: clamp(40px, 10vw, 100px);
+      }
+
+      .berita-content h2 {
+        font-family: "Poppins", sans-serif !important;
+        font-size: 44px;
+        line-height: 120%;
+      }
+
+      .berita-date {
+        font-family: "Inter", sans-serif !important;
+        color: #000;
+        opacity: 50%;
+        line-height: 20px;
+        letter-spacing: -0.16px;
+        font-size: 14px;
+      }
+
+      .berita-content p:not(.berita-date) {
+        font-family: "Inter", sans-serif !important;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+      }
+
+      .share-section {
+        margin-top: 40px;
+      }
+
+      .share {
+        font-family: "Inter", sans-serif !important;
+        color: #051244;
+        font-size: 14px !important;
+        line-height: 20px;
+        letter-spacing: -0.16px;
+      }
+
+      .share-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        border: 1.14px solid #101828;
+        text-decoration: none;
+      }
+
+      .share-icon img {
+        width: 13.71px;
+        height: auto;
+        transition: 0.2s;
+      }
+
+      .share-icon:hover img {
+        opacity: 1;
+      }
+
+      .scroll-button {
+        position: fixed;
+        right: 80px;
+        bottom: 30px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      .scroll-button img {
+        width: 24px;
+        height: 24px;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        transform: translateY(15px);
+      }
+
+      .scroll-button.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .scroll-button:hover {
+        background: #fff;
+        transform: translateY(3px);
+      }
+
+      #scrollUpBtn {
+        bottom: 100px;
+      }
+
+      /* ---------------- Footer ---------------- */
+      footer,
+      footer * {
+        font-family: "Inter", sans-serif !important;
+      }
+
+      .footer-bottom {
+        background: #02060d;
+        padding: 40px 80px;
+      }
+
+      .footer-text {
+        color: #fff;
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+        border: 1px solid #fcfcfd;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+        color: #fff;
+      }
+
+      .social-icon img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .social-icon:hover img {
+        transform: translateY(-3px);
+        opacity: 0.9;
+      }
+
+      /* ==================== ANIMASI GLOBAL ==================== */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-down {
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-down.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .zoom-in {
+        opacity: 0;
+        transform: scale(0.85);
+        transition: all 0.8s ease;
+      }
+
+      .zoom-in.show {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      /* Delay opsional */
+      .delay-1 {
+        transition-delay: 0.2s;
+      }
+      .delay-2 {
+        transition-delay: 0.4s;
+      }
+      .delay-3 {
+        transition-delay: 0.6s;
+      }
+
+      /* ----------------------- Hover Anim ----------------------- */
+      .share-icon {
+        transition: transform 0.3s ease, background 0.3s ease !important;
+      }
+
+      .share-icon:hover {
+        transform: translateY(-4px) scale(1.05);
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      /* Scroll button smooth show */
+      .scroll-button {
+        transition: opacity 0.4s ease, bottom 0.4s ease;
+      }
+
+      .scroll-button.show {
+        bottom: 100px;
+        opacity: 1;
+      }
+
+      /* ---------------- RESPONSIVE ---------------- */
+      @media (min-width: 1440px) {
+        .scroll-button {
+          right: calc((100vw - 1440px) / 2 + 80px);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        /* FOOTER */
+        .social-icons {
+          gap: 14px;
+        }
+
+        .social-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* ---------------- Tablet ---------------- */
+      @media (max-width: 992px) {
+        /* NAVBAR */
+        .navbar-custom {
+          margin: 20px 40px 0px 40px !important;
+          border-radius: 18px;
+        }
+
+        .navbar-logo {
+          padding: 16px 0px 16px 20px;
+          gap: 10px;
+        }
+
+        .navbar-logo img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .navbar-brand-text p {
+          font-size: 12px;
+        }
+
+        .navbar-brand-text strong {
+          font-size: 15px;
+        }
+
+        .button-group {
+          gap: 20px;
+          padding: 14px 20px 14px 0px;
+        }
+
+        /* HERO */
+        .hero-content {
+          padding-top: 80px;
+          padding-left: 40px !important;
+        }
+
+        /* CONTENT */
+        .berita-content {
+          margin: 0px 40px 60px 40px !important;
+        }
+
+        .berita-image {
+          padding: 40px;
+        }
+
+        .berita-image img {
+          height: 400px;
+        }
+
+        /* FOOTER */
+        .footer-bottom {
+          padding: 40px 40px;
+        }
+
+        .sosmed-section {
+          padding: 60px 60px 0px 60px;
+        }
+        .sosmed-gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .social-icons {
+          gap: 14px;
+        }
+
+        .social-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* ---------------- Mobile ---------------- */
+      @media (max-width: 576px) {
+        .navbar-custom {
+          margin: 30px 20px 0 20px !important;
+          border-radius: 20px;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0 !important;
+        }
+
+        .navbar-logo {
+          padding: 0 10px;
+          gap: 10px;
+        }
+
+        .navbar-logo img {
+          width: 42px;
+          height: 42px;
+        }
+
+        .button-group {
+          display: none !important;
+        }
+
+        .navbar-toggler {
+          display: block;
+          background: none;
+          border: none;
+          padding-right: 10px !important;
+        }
+
+        .hero-content {
+          padding-left: 20px !important;
+          padding-bottom: 40px;
+        }
+
+        .hero-content h1 {
+          font-size: 32px;
+        }
+
+        /* CONTENT */
+        .berita-image {
+          padding: 40px 20px;
+        }
+
+        .berita-image img {
+          height: 250px;
+        }
+
+        .berita-content {
+          margin-left: 20px !important;
+          margin-right: 20px !important;
+          margin-bottom: 60px !important;
+        }
+
+        .berita-content h2 {
+          font-size: 32px;
+        }
+
+        .berita-content p:not(.berita-date) {
+          font-size: 16px;
+        }
+
+        /* FOOTER */
+        .footer-bottom {
+          padding: 40px 20px;
+        }
+
+        .footer-bottom .container {
+          justify-content: center !important;
+          text-align: center;
+          flex-direction: column;
+        }
+
+        .footer-text {
+          font-size: 18px;
+        }
+
+        .social-icons {
+          justify-content: center !important;
+          margin-top: 20px;
+        }
+
+        .social-icons {
+          justify-content: center !important;
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar-Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+
+      <!-- Navbar -->
+      <div class="navbar-wrapper fade-down">
+        <nav class="navbar-expand-lg navbar-custom position-relative d-flex justify-content-between align-items-center p-0">
+          <div class="navbar-logo d-flex align-items-center">
+            <img src="assets/images/navbar/logo.svg" alt="Logo" />
+            <div class="navbar-brand-text d-none d-sm-block ms-2">
+              <p class="fw-normal m-0">Yayasan Pondok Pesantren</p>
+              <strong class="fw-bold">ALHAMDULILLAH BERBAUR</strong>
+            </div>
+          </div>
+
+          <div class="button-group d-flex align-items-center">
+            <button class="btn button-psb fw-semibold">PSB</button>
+            <button class="btn btn-dark d-flex align-items-center gap-2 fw-semibold">
+              Menu
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <button class="navbar-toggler d-lg-none" type="button">
+            <i class="bi bi-list fs-1"></i>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Title -->
+      <div class="hero-content fade-up delay-1">
+        <div class="hero-inner">
+          <p class="fw-norma fade-up delay-1l" style="color: #fff">Berita <span class="fw-semibold">/ Detail Berita</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="berita-detail-section">
+      <div class="p-0">
+        <!-- Gambar Utama -->
+        <div class="berita-image zoom-in">
+          <img src="assets/images/berita/berita-detail.jpg" alt="berita image" class="img-fluid" />
+        </div>
+
+        <!-- Konten -->
+        <div class="berita-content mx-auto">
+          <h2 class="fw-semibold mb-3 fade-up delay-1">Santri Baru Disambut dengan Doa Bersama dan Pengajian Akbar</h2>
+
+          <p class="berita-date fw-normal mb-4 fade-up delay-1">02 Okt 2024</p>
+
+          <p class="fade-up delay-2">
+            Pondok Pesantren Al-Basyiriyyah menggelar acara penyambutan santri baru dengan kegiatan Doa Bersama dan Pengajian Akbar pada awal tahun ajaran baru. Kegiatan ini menjadi tradisi tahunan yang penuh makna, sebagai bentuk rasa
+            syukur atas datangnya generasi penerus yang siap menimba ilmu di pesantren. Suasana haru dan bahagia menyelimuti seluruh area pondok sejak pagi hari.
+          </p>
+
+          <p class="fade-up delay-2">
+            Kedatangan para santri baru disambut hangat oleh para ustadz, santri senior, dan pengurus pesantren. Sejak langkah pertama di gerbang pondok, mereka disambut dengan lantunan shalawat dan ucapan selamat datang yang menyejukkan
+            hati. Momen ini menjadi simbol dimulainya perjalanan spiritual dan intelektual mereka di lingkungan pesantren yang penuh keberkahan.
+          </p>
+
+          <p class="fade-up delay-2">
+            Acara resmi dimulai dengan pembacaan ayat suci Al-Qur’an dan doa bersama. Para santri dan ustadz khusyuk memanjatkan doa agar proses pembelajaran tahun ini berjalan lancar, penuh keberkahan, dan membawa manfaat bagi umat. Doa
+            juga ditujukan para pendiri dan guru-guru terdahulu yang telah mewariskan semangat dakwah dan pendidikan Islam.
+          </p>
+
+          <p class="fade-up delay-2">
+            Setelah sesi doa, acara dilanjutkan dengan pengajian akbar yang diisi oleh KH. Ahmad Basir, salah satu ulama kharismatik dari wilayah sekitar. Dalam ceramahnya, beliau menekankan pentingnya menuntut ilmu dengan niat yang ikhlas
+            dan menjaga adab terhadap guru serta sesama santri. Pesan-pesan beliau mengingatkan bahwa keberkahan ilmu lahir dari ketulusan dan penghormatan kepada para pengajar.
+          </p>
+
+          <p class="fade-up delay-2">
+            Para santri baru terlihat antusias menyimak setiap nasihat yang disampaikan. Banyak di antara mereka yang mencatat poin-poin penting sebagai bekal awal menapaki kehidupan pesantren. Kehadiran para wali santri juga menambah
+            khidmat suasana, sekaligus memperlihatkan dukungan penuh keluarga terhadap pendidikan anak-anak mereka di pondok.
+          </p>
+
+          <p class="fade-up delay-2">
+            Selain sebagai momentum spiritual, kegiatan ini juga menjadi sarana mempererat tali silaturahmi antar santri dan pengurus pondok. Melalui suasana hangat dan penuh kebersamaan, santri baru mulai mengenal teman-teman seangkatan
+            dan menyesuaikan diri dengan lingkungan pesantren yang memiliki ritme kehidupan tersendiri.
+          </p>
+
+          <p class="fade-up delay-2">
+            Menjelang akhir acara, pimpinan pondok memberikan sambutan dan pesan penutup. Beliau berpesan agar setiap santri menjaga niat belajar semata-mata karena Allah, serta menjadikan pondok sebagai tempat untuk membentuk karakter dan
+            memperdalam pemahaman agama. “Ilmu tanpa adab akan kehilangan maknanya,” ujar beliau dengan penuh penekanan.
+          </p>
+
+          <p class="m-0 fade-up delay-2">
+            Kegiatan penyambutan santri baru ini diakhiri dengan pembacaan doa penutup dan makan bersama di halaman pondok. Canda dan tawa ringan terdengar di antara para santri, menandakan awal perjalanan baru yang penuh harapan.
+            Diharapkan, semangat dan nilai-nilai kebersamaan yang tumbuh sejak hari pertama ini dapat terus terjaga selama masa pendidikan mereka di Pondok Pesantren Al-Basyiriyyah.
+          </p>
+
+          <!-- Bagikan -->
+          <div class="share-section fade-up delay-2">
+            <p class="share fw-semibold mb-2">Bagikan ini</p>
+            <div class="d-flex gap-2">
+              <a href="#" class="share-icon">
+                <img src="assets/images/icons/facebook-black.svg" alt="facebook" />
+              </a>
+              <a href="#" class="share-icon">
+                <img src="assets/images/icons/instagram-black.svg" alt="instagram" />
+              </a>
+              <a href="#" class="share-icon">
+                <img src="assets/images/icons/whatsapp-black.svg" alt="whatsapp" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Up -->
+        <div class="scroll-button d-none d-lg-block" id="scrollUpBtn">
+          <img src="assets/images/icons/arrow-up.svg" alt="scroll up" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap p-0">
+        <p class="mb-0 footer-text fw-medium">Copyright © 2024 | Pondok Pesantren</p>
+
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <img src="assets/images/hero/facebook.svg" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="/assets/images/hero/instagram.svg" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="assets/images/hero/youtube.svg" alt="YouTube" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="assets/images/hero/tiktok.svg" alt="TikTok" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const elements = document.querySelectorAll(".fade-up, .fade-down, .zoom-in");
+
+      function reveal() {
+        const trigger = window.innerHeight * 0.88;
+
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect().top;
+
+          if (rect < trigger) {
+            el.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", reveal);
+      window.addEventListener("load", reveal);
+    </script>
+
+    <!-- Scroll up -->
+    <script>
+      // Ambil tombol scroll up
+      const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+      // Daftar section yang akan dipakai untuk scroll per section
+      const sectionSelectors = [".hero-section", ".berita-detail-section"];
+
+      // Ambil elemen section yang ada
+      const sections = sectionSelectors.map((sel) => document.querySelector(sel)).filter(Boolean);
+
+      // ---------------------------------------------
+      // 1. SHOW/HIDE scroll-up button
+      // ---------------------------------------------
+      window.addEventListener("scroll", () => {
+        if (window.scrollY <= 20) {
+          // Paling atas → Hilangkan button
+          scrollUpBtn.classList.remove("show");
+        } else {
+          // Sudah scroll turun → Tampilkan button
+          scrollUpBtn.classList.add("show");
+        }
+      });
+
+      // ---------------------------------------------
+      // 2. SCROLL PER SECTION
+      // ---------------------------------------------
+      scrollUpBtn.addEventListener("click", () => {
+        const currentScroll = window.scrollY;
+
+        // Cari semua section yang posisinya di atas posisi scroll sekarang
+        const aboveSections = sections.filter((sec) => sec.offsetTop < currentScroll - 20);
+
+        if (aboveSections.length === 0) {
+          // Jika sudah di section paling atas → scroll ke top
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+
+        // Ambil section sebelumnya
+        const prevSection = aboveSections[aboveSections.length - 1];
+
+        window.scrollTo({
+          top: prevSection.offsetTop,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

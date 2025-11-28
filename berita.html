@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berita | Pondok Pesantren</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+      /* ---------------- Fonts Poppins ---------------- */
+      /* Thin 100 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Thin.ttf") format("truetype");
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ThinItalic.ttf") format("truetype");
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* ExtraLight 200 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraLight.ttf") format("truetype");
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraLightItalic.ttf") format("truetype");
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      /* Light 300 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Light.ttf") format("truetype");
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-LightItalic.ttf") format("truetype");
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      /* Regular 400 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Regular.ttf") format("truetype");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Italic.ttf") format("truetype");
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      /* Medium 500 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Medium.ttf") format("truetype");
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-MediumItalic.ttf") format("truetype");
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      /* SemiBold 600 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-SemiBold.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-SemiBoldItalic.ttf") format("truetype");
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      /* Bold 700 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Bold.ttf") format("truetype");
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-BoldItalic.ttf") format("truetype");
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      /* ExtraBold 800 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraBold.ttf") format("truetype");
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-ExtraBoldItalic.ttf") format("truetype");
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      /* Black 900 */
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-Black.ttf") format("truetype");
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        src: url("Poppins-BlackItalic.ttf") format("truetype");
+        font-weight: 900;
+        font-style: italic;
+      }
+      
+      /* ---------------- Fonts Inter ---------------- */
+      /* Thin 100 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Thin.otf') format('opentype');
+        font-weight: 100;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-ThinItalic.otf') format('opentype');
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      /* Extra Light 200 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-ExtraLight.otf') format('opentype');
+        font-weight: 200;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-ExtraLightItalic.otf') format('opentype');
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      /* Light 300 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Light.otf') format('opentype');
+        font-weight: 300;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-LightItalic.otf') format('opentype');
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      /* Regular 400 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      /* Medium 500 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-MediumItalic.otf') format('opentype');
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      /* SemiBold 600 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-SemiBold.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-SemiBoldItalic.otf') format('opentype');
+        font-weight: 600;
+        font-style: italic;
+      }
+
+      /* Bold 700 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Bold.otf') format('opentype');
+        font-weight: 700;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-BoldItalic.otf') format('opentype');
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      /* ExtraBold 800 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-ExtraBold.otf') format('opentype');
+        font-weight: 800;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-ExtraBoldItalic.otf') format('opentype');
+        font-weight: 800;
+        font-style: italic;
+      }
+
+      /* Black 900 */
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-Black.otf') format('opentype');
+        font-weight: 900;
+        font-style: normal;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/fonts_inter/Inter-BlackItalic.otf') format('opentype');
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      /* ---------------- Navbar ---------------- */
+      .navbar-wrapper,
+      .navbar-wrapper * {
+        font-family: 'Inter', sans-serif !important;
+      }
+
+      .navbar-wrapper {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto; 
+        z-index: 999;
+      }
+
+      .navbar-custom {
+        margin: 52px 80px 0px 80px;
+        border-radius: 24px;
+        background-color: #fff;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 20px 0px 20px 24px;
+      }
+
+      .navbar-logo img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .navbar-brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar-brand-text p {
+        font-size: 14px;
+        color: #000;
+        line-height: 160%;
+        margin: 0;
+      }
+
+      .navbar-brand-text strong {
+        font-size: 18px;
+        color: #000;
+        line-height: 140%;
+      }
+
+      .button-group {
+        padding: 18px 24px 18px 0px;
+        gap: 24px;
+      }
+
+      .button-psb {
+        padding: clamp(12px, 2vw, 16.5px) clamp(20px, 3vw, 32px);
+        font-size: clamp(14px, 1.2vw, 16px);
+        line-height: 100%;
+        border-radius: clamp(10px, 1.2vw, 16px);
+        border: 1px solid #000;
+        background: transparent;
+        color: #000;
+      }
+
+      .button-psb:hover {
+        background: #000;
+        color: #fff;
+      }
+
+      .btn-dark {
+        padding: clamp(10px, 1.5vw, 14px) clamp(20px, 3vw, 32px);
+        line-height: 100%;
+        border-radius: clamp(10px, 1.2vw, 16px);
+        font-size: clamp(14px, 1.2vw, 16px);
+        background: #000;
+        border: 1px solid #000;
+      }
+
+      .btn-dark:hover {
+        background: #333;
+      }
+
+      .navbar-toggler {
+        display: none;
+        background: none;
+        border: none;
+        padding: 0;
+      }
+
+      /* ---------------- Hero ---------------- */
+      .hero-section {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        background: url("assets/images/hero/hero.jpg") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        padding: 151px 80px 56px 80px;
+      }
+
+      .hero-inner {
+        width: 100%;
+        max-width: 1220px;   
+        margin: 0 auto;    
+        display: flex;
+        justify-content: flex-start;
+      }
+
+
+      .hero-content h1 {
+        font-family: 'Poppins', sans-serif !important;
+        color: white;
+        font-size: 44px;
+        line-height: 120%;
+        margin: 0;
+      }
+
+      /* ---------------- Content ---------------- */
+      .berita-section {
+        padding: 0px 100px;
+
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .row {
+        gap: 40px;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto; 
+        box-shadow: none !important;
+      }
+
+      .title {
+        font-family: 'Inter', sans-serif !important;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -0.2px;
+        margin-bottom: 56px;
+        padding-top: 100px;
+      }
+
+      .berita-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        justify-content: flex-start;
+      }
+
+      .berita-item {
+        width: calc((100% - 80px) / 3);
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .berita-item .card {
+        width: 100%;
+      }
+
+      .berita-img {
+        width: 100%;
+        height: 360px !important; 
+        object-fit: cover;
+        border-radius: 24px;
+      }
+
+      .card-body {
+        margin-top: 24px;
+      }
+
+      .card-title {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 24px;
+        line-height: 140%;
+      }
+
+      .card-text {
+        font-family: 'Poppins', sans-serif !important;
+        line-height: 160%;
+        opacity: 50%;
+      }
+
+      .btn-lainnya {
+        font-family: 'Inter', sans-serif !important;
+        margin: 56px 0px 40px 0px;
+        display: flex;            
+        justify-content: center;  
+        align-items: center;      
+        width: 100%;             
+      }
+
+      .btn-lainnya .btn {
+        background-color: #f2f4f7;
+        color: #101828;
+        font-size: 16px;
+        line-height: 22px;
+        initial-letter: -0.18px;
+        padding: 11px 24px;
+        border-radius: 8px;
+        display: inline-block;    
+      }
+
+      .hidden-news {
+        display: none;
+      }
+
+      .sosmed-section {
+        padding: 80px 100px 40px 100px;
+
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .sosmed-header {
+        margin-bottom: 56px;
+      }
+
+      .sosmed-header h4 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 36px;
+        line-height: 38px;
+        letter-spacing: -0.2px;
+      }
+
+      .next-icon {
+        width: 20px; 
+        height: auto;
+        object-fit: contain;
+      }
+
+      .sosmed-gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+      }
+
+      .sosmed-item {
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        cursor: pointer;
+      }
+
+      .sosmed-item:hover {
+        transform: translateY(-8px) scale(1.03);
+      }
+
+      .sosmed-item img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 24px;
+        transition: transform 0.4s ease;
+      }
+
+      .sosmed-item:hover img {
+        transform: scale(1.08);
+      }
+
+      .ig-caption {
+        font-family: 'Poppins', sans-serif !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: #080e1e;
+      }
+
+      .ig-icon {
+        width: 18px !important;
+        height: 18px !important;
+      }
+
+      .sosmed-link:hover {
+        opacity: 0.7;
+      }
+
+     .btn-lainnya-s {
+        margin: 56px 0px 40px 0px;
+        display: flex;           
+        justify-content: center;  
+        align-items: center;     
+        width: 100%;
+      }
+
+      .btn-lainnya-s .btn {
+        font-family: 'Inter', sans-serif !important;
+        background-color: #f2f4f7;
+        color: #101828;
+        font-size: 16px;
+        line-height: 22px;
+        initial-letter: -0.18px;
+        padding: 11px 24px;
+        border-radius: 8px;
+        display: inline-block;    
+      }
+
+      .hidden-sosmed {
+        display: none;
+      }
+
+      .scroll-button {
+        position: fixed;
+        right: 80px;
+        bottom: 30px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+      }
+
+      .scroll-button img {
+        width: 24px;
+        height: 24px;
+        display: block;     
+        margin: 0 auto;     
+        padding: 0;  
+        transform: translateY(15px);  
+      }
+
+      .scroll-button.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .scroll-button:hover {
+        background: #fff;
+        transform: translateY(3px);
+      }
+
+      #scrollUpBtn {
+        bottom: 100px;
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .fade-down {
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: all 0.8s ease;
+      }
+
+      .fade-down.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .delay-1 {
+        transition-delay: 0.2s;
+      }
+
+     /* ---------------- Footer ---------------- */
+      footer,
+      footer * {
+        font-family: "Inter", sans-serif !important;
+      }
+
+      .footer-bottom {
+        background: #02060d;
+        padding: 40px 80px;
+      }
+
+      .footer-text {
+        color: #fff;
+        font-size: 20px;
+        line-height: 150%;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        /* background: rgba(255, 255, 255, 0.15); */
+        /* backdrop-filter: blur(10px); */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* color: #fff; */
+        /* font-size: 20px; */
+        transition: all 0.3s;
+        border: 1px solid #fcfcfd;
+        text-decoration: none;
+      }
+
+      .social-icon:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+        color: #fff;
+      }
+
+      .social-icon img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        /* filter: invert(1); membuat ikon SVG hitam jadi putih jika background gelap */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      .social-icon:hover img {
+        transform: translateY(-3px);
+        opacity: 0.9;
+      }
+
+       /* ---------------- Animasi ---------------- */
+      @keyframes fadeUp {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fadeScale {
+        0% { opacity: 0; transform: scale(0.92); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes fadeDown {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      /* CLASS UTAMA */
+      .show {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        transition: all 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      /* ---------------- Berita & Cerita ---------------- */ 
+      .berita-section h4,
+      .berita-item {
+        opacity: 0;
+        transform: translateY(25px);
+        transition: opacity .6s ease, transform .6s ease;
+      }
+
+      .berita-section h4.show {
+        transition-delay: 0.2s;
+      }
+
+      /* Staggered */
+      .berita-item:nth-child(1).show { transition-delay: 0.2s; }
+      .berita-item:nth-child(2).show { transition-delay: 0.3s; }
+      .berita-item:nth-child(3).show { transition-delay: 0.4s; }
+      .berita-item:nth-child(4).show { transition-delay: 0.5s; }
+      .berita-item:nth-child(5).show { transition-delay: 0.6s; }
+      .berita-item:nth-child(6).show { transition-delay: 0.7s; }
+
+      .berita-item:nth-child(7).show { transition-delay: 0.2s; }
+      .berita-item:nth-child(8).show { transition-delay: 0.3s; }
+      .berita-item:nth-child(9).show { transition-delay: 0.4s; }
+      .berita-item:nth-child(10).show { transition-delay: 0.5s; }
+      .berita-item:nth-child(11).show { transition-delay: 0.6s; }
+      .berita-item:nth-child(12).show { transition-delay: 0.7s; }
+
+       /* ---------------- Sosmed ---------------- */
+      .sosmed-header h4,
+      .sosmed-item {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+
+      .sosmed-header h4.show { transition-delay: 0.2s; }
+      .sosmed-header a.show { transition-delay: 0.3s; }
+
+      .sosmed-item:nth-child(1).show { transition-delay: 0.35s; }
+      .sosmed-item:nth-child(2).show { transition-delay: 0.45s; }
+      .sosmed-item:nth-child(3).show { transition-delay: 0.55s; }
+      .sosmed-item:nth-child(4).show { transition-delay: 0.65s; }
+      .sosmed-item:nth-child(5).show { transition-delay: 0.75s; }
+      .sosmed-item:nth-child(6).show { transition-delay: 0.85s; }
+      .sosmed-item:nth-child(7).show { transition-delay: 0.95s; }
+      .sosmed-item:nth-child(8).show { transition-delay: 1.05s; }
+
+      .sosmed-item:nth-child(9).show { transition-delay: 1.15s; }
+      .sosmed-item:nth-child(10).show { transition-delay: 1.25s; }
+      .sosmed-item:nth-child(11).show { transition-delay: 1.35s; }
+      .sosmed-item:nth-child(12).show { transition-delay: 1.45s; }
+
+
+      /* ---------------- RESPONSIVE ---------------- */
+      @media (min-width: 1440px) {
+        .scroll-button {
+          right: calc((100vw - 1440px) / 2 + 80px);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .berita-img {
+          height: 250px !important;
+        }
+
+        .sosmed-gallery {
+          gap: 24px;
+        }
+
+        .sosmed-item img {
+          height: 280px;
+        }
+
+        .social-icons {
+          gap: 14px;
+        }
+
+        .social-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* ---------------- Tablet ---------------- */
+      @media (max-width: 992px) {
+        /* NAVBAR */
+        .navbar-custom {
+          margin: 20px 40px 0px 40px !important;
+          border-radius: 18px;
+        }
+
+        .navbar-logo {
+          padding: 16px 0px 16px 20px;
+          gap: 10px;
+        }
+
+        .navbar-logo img {
+          width: 40px;
+          height: 40px;
+        }
+
+        .navbar-brand-text p {
+          font-size: 12px;
+        }
+
+        .navbar-brand-text strong {
+          font-size: 15px;
+        }
+
+        .button-group {
+          gap: 20px;
+          padding: 14px 20px 14px 0px;
+        }
+
+        /* HERO */
+        .hero-content {
+          padding-top: 80px;
+          padding-left: 40px !important;
+        }
+
+        /* CONTENT */
+        .berita-item {
+          width: calc((100% - 40px) / 2); 
+        }
+
+        .berita-section {
+          padding: 0px 60px;
+        }
+
+        .title {
+          padding-top: 60px;
+        }
+
+        /* FOOTER */
+        .footer-bottom {
+          padding: 40px 40px;
+        }
+
+        .sosmed-section {
+          padding: 60px 60px 0px 60px;
+        }
+        .sosmed-gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .social-icons {
+          gap: 14px;
+        }
+
+        .social-icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* ---------------- Mobile ---------------- */
+      @media (max-width: 576px) {
+        .navbar-custom {
+          margin: 30px 20px 0 20px !important; 
+          border-radius: 20px;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0 !important;
+        }
+
+        .navbar-logo {
+          padding: 0 10px;
+          gap: 10px;
+        }
+
+        .navbar-logo img {
+          width: 42px;
+          height: 42px;
+        }
+
+        .button-group {
+          display: none !important; 
+        }
+
+        .navbar-toggler {
+          display: block;
+          background: none;
+          border: none;
+          padding-right: 10px !important;
+        }
+
+        .hero-content {
+          padding-left: 20px !important;
+          padding-bottom: 40px;
+        }
+
+        .hero-content h1 {
+          font-size: 32px;
+        }
+
+        /* CONTENT */
+        .berita-section {
+          padding: 0px 40px;
+        }
+
+        .berita-item {
+          width: 100%; 
+        }
+
+        .berita-img {
+          height: 200px;
+        }
+
+        .card-title {
+          font-size: 24px !important;
+          line-height: 120%;
+          letter-spacing: -0.2px;
+        }
+
+        .sosmed-section {
+          padding: 0px 40px;
+        }
+
+        .sosmed-gallery {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr); 
+          gap: 16px;
+        }
+
+        .sosmed-item img {
+          height: 220px;
+        }
+
+        .ig-caption {
+          font-size: 12px;
+          gap: 6px;
+        }
+
+        /* FOOTER */
+        .footer-bottom {
+          padding: 40px 20px;
+        }
+
+        .footer-bottom .container {
+          justify-content: center !important;
+          text-align: center;
+          flex-direction: column;
+        }
+
+        .footer-text {
+          font-size: 18px;
+        }
+
+        .social-icons {
+          justify-content: center !important;
+          margin-top: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar-Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+
+      <!-- Navbar -->
+      <div class="navbar-wrapper fade-down">
+        <nav class="navbar-expand-lg navbar-custom position-relative d-flex justify-content-between align-items-center p-0">
+          <div class="navbar-logo d-flex align-items-center">
+            <img src="assets/images/navbar/logo.svg" alt="Logo" />
+            <div class="navbar-brand-text d-none d-sm-block ms-2">
+              <p class="fw-normal m-0">Yayasan Pondok Pesantren</p>
+              <strong class="fw-bold">ALHAMDULILLAH BERBAUR</strong>
+            </div>
+          </div>
+
+          <div class="button-group d-flex align-items-center">
+            <button class="btn button-psb fw-semibold">PSB</button>
+            <button class="btn btn-dark d-flex align-items-center gap-2 fw-semibold">
+              Menu
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <button class="navbar-toggler d-lg-none" type="button">
+            <i class="bi bi-list fs-1"></i>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Title -->
+      <div class="hero-content">
+        <div class="hero-inner">
+          <h1 class="fw-semibold fade-up delay-1">Berita</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="berita-section">
+      <div class="p-0">
+        <h4 class="title text-start fw-bold">Berita & Cerita dari Pesantren</h4>
+
+        <div class="berita-flex-container">
+          <!-- 6 berita pertama -->
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-1.svg" class="berita-img" alt="Santri Baru Disambut" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Santri Baru Disambut dengan Doa Bersama dan Pengajian Akbar</h5>
+                <p class="card-text small">15 Okt, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-2.svg" class="berita-img" alt="Pesantren Resmikan Swalayan" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Pesantren Resmikan Swalayan Santri sebagai Wujud Kemandirian Eko...</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-3.svg" class="berita-img" alt="Bantuan Kitab" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Alhamdulillah, Kemenag Salurkan Bantuan Kitab untuk Pondok Pesantren</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-3.svg" class="berita-img" alt="Bantuan Kitab" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Alhamdulillah, Kemenag Salurkan Bantuan Kitab untuk Pondok Pesantren</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-1.svg" class="berita-img" alt="Santri Baru Disambut" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Santri Baru Disambut dengan Doa Bersama dan Pengajian Akbar</h5>
+                <p class="card-text small">15 Okt, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-2.svg" class="berita-img" alt="Pesantren Resmikan Swalayan" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Pesantren Resmikan Swalayan Santri sebagai Wujud Kemandirian Eko...</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden news -->
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-1.svg" class="berita-img" alt="Santri Baru Disambut" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Santri Baru Disambut dengan Doa Bersama dan Pengajian Akbar</h5>
+                <p class="card-text small">15 Okt, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-2.svg" class="berita-img" alt="Pesantren Resmikan Swalayan" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Pesantren Resmikan Swalayan Santri sebagai Wujud Kemandirian Eko...</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-3.svg" class="berita-img" alt="Bantuan Kitab" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Alhamdulillah, Kemenag Salurkan Bantuan Kitab untuk Pondok Pesantren</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-3.svg" class="berita-img" alt="Bantuan Kitab" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Alhamdulillah, Kemenag Salurkan Bantuan Kitab untuk Pondok Pesantren</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-1.svg" class="berita-img" alt="Santri Baru Disambut" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Santri Baru Disambut dengan Doa Bersama dan Pengajian Akbar</h5>
+                <p class="card-text small">15 Okt, 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="berita-item hidden-news">
+            <div class="card border-0">
+              <img src="assets/images/berita/berita-2.svg" class="berita-img" alt="Pesantren Resmikan Swalayan" />
+              <div class="card-body p-0">
+                <h5 class="card-title fw-semibold">Pesantren Resmikan Swalayan Santri sebagai Wujud Kemandirian Eko...</h5>
+                <p class="card-text small">13 Okt, 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center btn-lainnya">
+          <button class="btn fw-semibold">Lihat Lainnya</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="sosmed-section">
+      <div class="sosmed">
+        <!-- Title + Link -->
+        <div class="sosmed-header d-flex justify-content-between align-items-center">
+          <h4 class="fw-semibold m-0">Serpihan Penuh Hikmah</h4>
+        </div>
+
+        <!-- Gallery -->
+        <div class="sosmed-gallery p-0">
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-1.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-2.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-3.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-4.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+           <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-1.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-2.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-3.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <spa class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item">
+            <img src="assets/images/sosmed/sosmed-4.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item hidden-sosmed">
+            <img src="assets/images/sosmed/sosmed-1.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item hidden-sosmed">
+            <img src="assets/images/sosmed/sosmed-2.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item hidden-sosmed">
+            <img src="assets/images/sosmed/sosmed-3.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <spa class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+
+          <div class="sosmed-item hidden-sosmed">
+            <img src="assets/images/sosmed/sosmed-4.jpg" alt="" />
+            <div class="ig-caption p-0">
+              <img src="assets/images/sosmed/logo-ig.png" class="ig-icon" alt="" />
+              <span class="fw-semibold">@instagrampondok</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Up -->
+        <div class="scroll-button d-none d-lg-block" id="scrollUpBtn">
+          <img src="assets/images/icons/arrow-up.svg" alt="scroll up" />
+        </div>
+
+        <div class="text-center btn-lainnya-s">
+          <button class="btn fw-semibold">Lihat Lainnya</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bottom">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap p-0">
+        
+        <p class="mb-0 footer-text fw-medium">
+          Copyright © 2024 | Pondok Pesantren
+        </p>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="assets/images/hero/facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="/assets/images/hero/instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/images/hero/youtube.svg" alt="YouTube" />
+            </a>
+            <a href="#" class="social-icon">
+              <img src="assets/images/hero/tiktok.svg" alt="TikTok" />
+            </a>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Load more Berita -->
+    <script>
+      const btnBerita = document.querySelector(".btn-lainnya .btn");
+      const allNews = document.querySelectorAll(".berita-item");
+      const hiddenNews = document.querySelectorAll(".hidden-news");
+
+      let initialShow = 6;  // default desktop
+      let loadCount = 3;
+
+      // Detect device
+      if (window.innerWidth <= 576) {
+        // MOBILE
+        initialShow = 1;
+        loadCount = 1;
+      } else if (window.innerWidth <= 992) {
+        // TABLET
+        initialShow = 2;
+        loadCount = 2;
+      }
+
+      // Hide items based on initialShow
+      allNews.forEach((item, index) => {
+        if (index >= initialShow) {
+          item.classList.add("hidden-news");
+        } else {
+          item.classList.remove("hidden-news");
+        }
+      });
+
+      // Load more function
+      btnBerita.addEventListener("click", function () {
+        const hidden = document.querySelectorAll(".berita-item.hidden-news");
+
+        for (let i = 0; i < loadCount && i < hidden.length; i++) {
+          hidden[i].classList.remove("hidden-news");
+        }
+
+        if (document.querySelectorAll(".berita-item.hidden-news").length === 0) {
+          btnBerita.style.display = "none";
+        }
+      });
+    </script>
+
+    <!-- Load more Sosmed -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const items = document.querySelectorAll(".sosmed-item");
+        const btn = document.querySelector(".btn-lainnya-s .btn");
+
+        function setupInitialView() {
+          const width = window.innerWidth;
+
+          let initialShow;
+          if (width < 768) {
+            // MOBILE
+            initialShow = 2;
+          } else if (width < 1024) {
+            // TABLET
+            initialShow = 3;
+          } else {
+            // DESKTOP
+            initialShow = 8;
+          }
+
+          items.forEach((item, index) => {
+            if (index < initialShow) {
+              item.classList.remove("hidden-sosmed");
+            } else {
+              item.classList.add("hidden-sosmed");
+            }
+          });
+
+          // Tampilkan tombol lagi kalau ada item tersembunyi
+          btn.style.display = document.querySelectorAll(".sosmed-item.hidden-sosmed").length > 0
+            ? "block"
+            : "none";
+        }
+
+        // Load More
+        btn.addEventListener("click", function () {
+          const width = window.innerWidth;
+
+          let loadCount;
+          if (width < 768) {
+            loadCount = 2;      // MOBILE
+          } else if (width < 1024) {
+            loadCount = 3;      // TABLET
+          } else {
+            loadCount = 4;      // DESKTOP
+          }
+
+          const hiddenItems = document.querySelectorAll(".sosmed-item.hidden-sosmed");
+
+          for (let i = 0; i < loadCount && i < hiddenItems.length; i++) {
+            hiddenItems[i].classList.remove("hidden-sosmed");
+          }
+
+          // Hilangkan tombol jika sudah habis
+          if (document.querySelectorAll(".sosmed-item.hidden-sosmed").length === 0) {
+            btn.style.display = "none";
+          }
+        });
+
+        // Jalankan tampilan awal
+        setupInitialView();
+
+        // Reset saat resize
+        window.addEventListener("resize", setupInitialView);
+      });
+    </script>
+
+    <!-- Hidden Page -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      /* ============================
+      BERITA & CERITA SECTION
+      ============================= */
+    const beritaTitle = document.querySelector('.berita-section h4');
+    const beritaItems = document.querySelectorAll('.berita-item');
+
+    // Observer animasi
+    const beritaObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    // Observe title h4
+    if (beritaTitle) beritaObserver.observe(beritaTitle);
+
+    // Observe semua item berita
+    beritaItems.forEach(item => beritaObserver.observe(item));
+      /* ============================
+      SOSMED SECTION
+      ============================= */
+      const sosmedEls = document.querySelectorAll(
+        ".sosmed-section .sosmed-header h4, \
+        .sosmed-section .sosmed-header a, \
+        .sosmed-section .sosmed-item"
+      );
+
+      sosmedEls.forEach(el => observer.observe(el));
+
+     
+    });
+    </script>
+
+    <!-- Scroll up -->
+    <script>
+    // Ambil tombol scroll up
+    const scrollUpBtn = document.getElementById("scrollUpBtn");
+
+    // Daftar section yang akan dipakai untuk scroll per section
+    const sectionSelectors = [
+      ".hero-section",
+      ".berita-section",
+      ".sosmed-section",
+    ];
+
+    // Ambil elemen section yang ada
+    const sections = sectionSelectors
+      .map(sel => document.querySelector(sel))
+      .filter(Boolean);
+
+    // ---------------------------------------------
+    // 1. SHOW/HIDE scroll-up button
+    // ---------------------------------------------
+    window.addEventListener("scroll", () => {
+      if (window.scrollY <= 20) {
+        // Paling atas → Hilangkan button
+        scrollUpBtn.classList.remove("show");
+      } else {
+        // Sudah scroll turun → Tampilkan button
+        scrollUpBtn.classList.add("show");
+      }
+    });
+
+    // ---------------------------------------------
+    // 2. SCROLL PER SECTION
+    // ---------------------------------------------
+    scrollUpBtn.addEventListener("click", () => {
+      const currentScroll = window.scrollY;
+
+      // Cari semua section yang posisinya di atas posisi scroll sekarang
+      const aboveSections = sections.filter(sec => sec.offsetTop < currentScroll - 20);
+
+      if (aboveSections.length === 0) {
+        // Jika sudah di section paling atas → scroll ke top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+
+      // Ambil section sebelumnya
+      const prevSection = aboveSections[aboveSections.length - 1];
+
+      window.scrollTo({
+        top: prevSection.offsetTop,
+        behavior: "smooth"
+      });
+    });
+    </script>
+
+        <script>
+      const elements = document.querySelectorAll(".fade-up, .fade-down");
+
+      function reveal() {
+        const trigger = window.innerHeight * 0.88;
+
+        elements.forEach((el) => {
+          const rect = el.getBoundingClientRect().top;
+
+          if (rect < trigger) {
+            el.classList.add("show");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", reveal);
+      window.addEventListener("load", reveal);
+    </script>
+  </body>
+</html>
